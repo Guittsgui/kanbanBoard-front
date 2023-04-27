@@ -1,47 +1,55 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 export const container = styled.div`
-    background-color: #dbdbdb;
+
+    background-color: #e4e4e4;
+    min-height: 400px;
+
 `;
 
-export const header = styled.header`
-    height: 70px;
+export const nav = styled.nav`
     display: flex;
+    height: 50px;
     border-bottom: 1px solid black;
-    div{
-        flex: 1;
+
+    .headerdivs{
+        flex:1;
         text-align: center;
-        font-size: 16px;
         height: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
-        display: flex;
     }
-    .todo{
-        background-color: #ddffdd;
+    .todoNav{
+        background-color: #dcffdc;
     }
-    .doing{
-        background-color: #d0d0ff;
+    .doingNav{
+      background-color: #fdbfbf;
     }
-    .done{
-        background-color: #fcadad;
+    .doneNav{
+     background-color: #c6c6ff;
     }
 `;
 
-export const board = styled.div`
-    display: flex;
+export const body = styled.div`
     min-height: 400px;
-    div{
-        flex: 1;
-        padding-top: 20px;
+    display: flex;
+
+    .boxdiv{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center
     }
     .todoTasks{
+        flex:1;
         border-right: 1px solid black;
     }
     .doingTasks{
+        flex:1;
         border-right: 1px solid black;
+    }
+    .doneTasks{
+        flex:1
     }
 `;

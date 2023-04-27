@@ -1,5 +1,5 @@
-import * as S from './style'
 import Board from './routes/Board'
+import * as S from './style'
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
         <a href="#"> Add new Task</a>
       </S.nav>
       <Board/>
+  
     </>
   )
 }

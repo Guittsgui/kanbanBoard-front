@@ -1,29 +1,35 @@
+import TaskBox from '../../components/TaskBox'
 import * as S from './style'
 const Board = () => {
 
     return <S.container>
-        <S.header>
-            <div className="todo">
-                <h2> To Do: </h2>
+
+        <S.nav>
+            <div className="todoNav headerdivs">
+                <h2> To Do:</h2>
             </div>
-            <div className="doing">
-                <h2> Doing: </h2>
+
+            <div className="doingNav headerdivs">
+                <h2> Doing:</h2>
             </div>
-            <div className="done">
+
+            <div className="doneNav headerdivs">
                 <h2> Done: </h2>
             </div>
-        </S.header>
-        <S.board>
-             <div className="todoTasks">
-               
-             </div>
-             <div className="doingTasks">
-               
-             </div>
-             <div className="doneTasks">
-        
-             </div>
-        </S.board>
+        </S.nav>
+        <S.body>
+            <div className="todoTasks boxdiv">
+                <TaskBox/>
+                <TaskBox/>
+                <TaskBox/>
+            </div>
+            <div className="doingTasks boxdiv">
+                
+            </div>
+            <div className="doneTasks boxdiv">
+                
+            </div>
+        </S.body>
     </S.container>
 }
 
