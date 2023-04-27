@@ -12,7 +12,7 @@ export const container = styled.div`
     align-items: center;
     padding: 20px;
     input{
-        height: 25px;
+        height: 30px;
         width: 400px;
         text-align: center;
         border-radius: 20px;
@@ -27,7 +27,7 @@ export const container = styled.div`
         padding: 15px;
     }
     button{
-        height: 25px;
+        height: 30px;
         margin-top: 25px;
         width: 200px;
         letter-spacing: 2px;
@@ -49,8 +49,12 @@ export const back = styled.div`
     cursor: pointer;
     a{
         color: red;
+        border-bottom: 1px solid red;
+        padding-bottom: 5px;
+        letter-spacing: 2px;
         &:hover{
             color: #ff9e9e;
+            border-color: #ff9e9e;
         }
     }
 `;
