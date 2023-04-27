@@ -1,5 +1,5 @@
 import * as S from './style'
-
+import Board from './routes/Board'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       <S.nav>
         <a href="#"> Add new Task</a>
       </S.nav>
-      <h1> Olá Mundo</h1>
+      <Board/>
     </>
   )
 }

@@ -18,7 +18,8 @@ export const header = styled.header`
 `;
 export const nav = styled.nav`
     height: 80px;
-    border-bottom: 2px solid #5e105e;
+    border: 2px solid #5e105e;
+    border-top: none;
     display: flex;
     align-items: center;
     justify-content: center;
