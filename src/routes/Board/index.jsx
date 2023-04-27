@@ -14,7 +14,15 @@ const Board = () => {
             </div>
         </S.header>
         <S.board>
-            
+             <div className="todoTasks">
+               
+             </div>
+             <div className="doingTasks">
+               
+             </div>
+             <div className="doneTasks">
+        
+             </div>
         </S.board>
     </S.container>
 }

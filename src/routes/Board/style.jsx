@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 export const container = styled.div`
     background-color: #dbdbdb;
-    min-height: 400px;
 `;
 
 export const header = styled.header`
     height: 70px;
     display: flex;
+    border-bottom: 1px solid black;
     div{
         flex: 1;
         text-align: center;
@@ -30,5 +30,18 @@ export const header = styled.header`
 `;
 
 export const board = styled.div`
-    
+    display: flex;
+    min-height: 400px;
+    div{
+        flex: 1;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .todoTasks{
+        border-right: 1px solid black;
+    }
+    .doingTasks{
+        border-right: 1px solid black;
+    }
 `;
