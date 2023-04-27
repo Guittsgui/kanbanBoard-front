@@ -1,5 +1,7 @@
 import Board from './routes/Board'
 import * as S from './style'
+import {Outlet, Link} from 'react-router-dom'
+
 
 function App() {
 
@@ -9,9 +11,9 @@ function App() {
         <h1> Kanban Board</h1>
       </S.header>
       <S.nav>
-        <a href="#"> Add new Task</a>
+        <Link to="addtask"> Add new Task</Link>
       </S.nav>
-      <Board/>
+      <Outlet/>
   
     </>
   )

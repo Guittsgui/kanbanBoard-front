@@ -1,4 +1,6 @@
 import * as S from './style'
+import {CiCircleRemove} from 'react-icons/ci'
+import{AiOutlineArrowLeft, AiOutlineArrowRight,AiOutlineEye } from 'react-icons/ai'
 const TaskBox = () => {
 
     return <S.container>
@@ -9,7 +11,19 @@ const TaskBox = () => {
 
         </S.body>
         <S.buttonsBar>
-            
+            <button>
+                <CiCircleRemove size={25}/>
+            </button>
+            <button>
+                <AiOutlineArrowLeft size={25}/>
+            </button>
+            <button>
+                <AiOutlineArrowRight size={25}/>
+            </button>
+            <button>
+                <AiOutlineEye size={25}/>
+            </button>
+
         </S.buttonsBar>
     </S.container>
 }
