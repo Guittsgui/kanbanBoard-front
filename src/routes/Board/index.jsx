@@ -1,6 +1,23 @@
 import TaskBox from '../../components/TaskBox'
 import * as S from './style'
+import { useEffect , useState } from 'react'
+import { api } from '../../api'
+
 const Board = () => {
+
+    const [todoList, setTodoList] = useState([])
+    const [doingList, setDoingList] = useState([])
+    const [doneList, setDoneList] = useState([])
+
+
+    useEffect(()=>{
+
+        async function loadToDoTasks(){
+            const list = await api.getTasksByTypes()
+        }
+
+        loadToDoTasks()
+    },[])
 
     return <S.container>
 

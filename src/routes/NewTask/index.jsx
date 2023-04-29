@@ -24,7 +24,7 @@ const NewTask = () => {
         }
         const date = new Date()
         const task = {...inputs, date: date}
-        const json = await api.addNewTask(task)
+        await api.addNewTask(task)
         navigate("/")
     }
     function handleChange(e){
