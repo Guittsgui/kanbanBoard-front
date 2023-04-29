@@ -8,7 +8,7 @@ const TaskBox = () => {
 
         </S.colorBar>
         <S.body>
-
+            <p> Levar a bibz pra praia pq ela precisa pegar um solzinho</p>
         </S.body>
         <S.buttonsBar>
             <button>

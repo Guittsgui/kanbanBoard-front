@@ -2,6 +2,7 @@ import * as S from './style'
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import { api } from '../../api'
 
 
 const NewTask = () => {
@@ -16,18 +17,14 @@ const NewTask = () => {
     const [inputs, setInputs] = useState(data)
     const navigate = useNavigate()
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault()
         if(!inputs.body || !inputs.title){
             return
         }
         const date = new Date()
         const task = {...inputs, date: date}
-        
-        /// Adicionar new Task ao Banco.
-
-        /// Redirecionar para a página Inicial.
-
+        const json = await api.addNewTask(task)
         navigate("/")
     }
     function handleChange(e){

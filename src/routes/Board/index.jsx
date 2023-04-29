@@ -20,8 +20,6 @@ const Board = () => {
         <S.body>
             <div className="todoTasks boxdiv">
                 <TaskBox/>
-                <TaskBox/>
-                <TaskBox/>
             </div>
             <div className="doingTasks boxdiv">
                 
