@@ -11,11 +11,10 @@ const Board = () => {
 
 
     useEffect(()=>{
-
         async function loadToDoTasks(){
-            const list = await api.getTasksByTypes()
+            const list = await api.getTasksByTypes('todo')
+            setTodoList(list)
         }
-
         loadToDoTasks()
     },[])
 
@@ -35,8 +34,11 @@ const Board = () => {
             </div>
         </S.nav>
         <S.body>
-            <div className="todoTasks boxdiv">
-                <TaskBox/>
+            <div className="todoTasks boxdiv"> 
+                {todoList.map((task)=>(
+                    <TaskBox key={task.id}/>
+                ))}
+                
             </div>
             <div className="doingTasks boxdiv">
                 

@@ -9,7 +9,7 @@ const NewTask = () => {
     const data = {
         title: '',
         body: '',
-        type: 'doing'
+        type: 'todo'
     }
 
 

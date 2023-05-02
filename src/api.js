@@ -16,8 +16,10 @@ export const api = {
         return [json]
     },
 
-    getTasksByTypes: (type)=>{
-
+    getTasksByTypes: async (type)=>{
+        const response = await fetch(`http://localhost:3001/task/${type}`)
+        const json = await response.json()
+        return json
 
     },
 
