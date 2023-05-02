@@ -1,14 +1,15 @@
 import * as S from './style'
 import {CiCircleRemove} from 'react-icons/ci'
 import{AiOutlineArrowLeft, AiOutlineArrowRight,AiOutlineEye } from 'react-icons/ai'
-const TaskBox = () => {
+
+const TaskBox = ({task}) => {
 
     return <S.container>
         <S.colorBar>
 
         </S.colorBar>
         <S.body>
-            <p> Levar a bibz pra praia pq ela precisa pegar um solzinho</p>
+            <p> {task.title}</p>
         </S.body>
         <S.buttonsBar>
             <button>

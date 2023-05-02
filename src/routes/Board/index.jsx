@@ -36,15 +36,18 @@ const Board = () => {
         <S.body>
             <div className="todoTasks boxdiv"> 
                 {todoList.map((task)=>(
-                    <TaskBox key={task.id}/>
-                ))}
-                
+                    <TaskBox key={task.id} task={task}/>
+                ))}               
             </div>
             <div className="doingTasks boxdiv">
-                
+                {doingList.map((task)=>(
+                    <TaskBox key={task.id} task={task}/>
+                ))}
             </div>
             <div className="doneTasks boxdiv">
-                
+                {doneList.map((task)=>(
+                    <TaskBox key={task.id} task={task}/>
+                ))}              
             </div>
         </S.body>
     </S.container>
