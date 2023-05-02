@@ -18,6 +18,19 @@ const Board = () => {
         loadToDoTasks()
     },[])
 
+    function changeTodoToDoing(){
+
+    }
+    function changeDoingToDone(){
+
+    }
+    function changeDoneToDoing(){
+
+    }
+    function changeDoingToTodo(){
+
+    }
+
     return <S.container>
 
         <S.nav>

@@ -23,8 +23,13 @@ export const api = {
 
     },
 
-    removeTaskById: ()=>{
-
+    removeTaskById: async (id)=>{
+        const response = await fetch(`http://localhost:3001/task/${id}`,{
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+        })
     },
     changeTaskType: ()=>{
 
