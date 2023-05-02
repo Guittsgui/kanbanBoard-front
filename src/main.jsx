@@ -5,6 +5,7 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Board from './routes/Board/index.jsx'
 import NewTask from './routes/NewTask/index.jsx'
+import SeeOneTask from './routes/SeeOneTask/index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/addtask",
         element: <NewTask/>
+      },
+      {
+        path: "/task/:id",
+        element:<SeeOneTask/>
       }
     ]
   }

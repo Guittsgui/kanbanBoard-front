@@ -33,4 +33,7 @@ export const buttonsBar = styled.div`
         background-color: transparent;
         cursor: pointer;
     }
+    a{
+        color: black;
+    }
 `;

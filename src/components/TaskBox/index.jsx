@@ -2,6 +2,7 @@ import * as S from './style'
 import {CiCircleRemove} from 'react-icons/ci'
 import{AiOutlineArrowLeft, AiOutlineArrowRight,AiOutlineEye } from 'react-icons/ai'
 import {api} from './../../api'
+import {Link} from 'react-router-dom'
 
 const TaskBox = ({task}) => {
 
@@ -9,6 +10,9 @@ const TaskBox = ({task}) => {
         api.removeTaskById(task.id)
     }
 
+    function showTaskInfoById(){
+        
+    }
 
     return <S.container>
         <S.colorBar>
@@ -28,9 +32,9 @@ const TaskBox = ({task}) => {
             <button>
                 <AiOutlineArrowRight size={25}/>
             </button>
-            <button>
+            <Link to={`/task/${task.id}`}>
                 <AiOutlineEye size={25}/>
-            </button>
+            </Link>
 
         </S.buttonsBar>
     </S.container>

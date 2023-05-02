@@ -17,10 +17,16 @@ export const api = {
     },
 
     getTasksByTypes: async (type)=>{
-        const response = await fetch(`http://localhost:3001/task/${type}`)
+        const response = await fetch(`http://localhost:3001/tasks/${type}`)
         const json = await response.json()
         return json
 
+    },
+
+    getTaskById: async (id)=>{
+        const response = await fetch(`http://localhost:3001/task/${id}`)
+        const json = await response.json()
+        return json
     },
 
     removeTaskById: async (id)=>{
@@ -31,6 +37,7 @@ export const api = {
             method: 'DELETE'
         })
     },
+    
     changeTaskType: ()=>{
 
     }
