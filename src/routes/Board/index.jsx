@@ -19,7 +19,7 @@ const Board = () => {
     },[])
 
     function changeTodoToDoing(){
-
+        alert('TodoToDoing')
     }
     function changeDoingToDone(){
 
@@ -49,7 +49,9 @@ const Board = () => {
         <S.body>
             <div className="todoTasks boxdiv"> 
                 {todoList.map((task)=>(
-                    <TaskBox key={task.id} task={task}/>
+                    <TaskBox key={task.id}
+                     task={task}
+                     rightArrow={changeTodoToDoing}/>
                 ))}               
             </div>
             <div className="doingTasks boxdiv">
