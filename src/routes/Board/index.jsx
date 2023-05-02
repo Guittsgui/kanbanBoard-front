@@ -14,8 +14,18 @@ const Board = () => {
         async function loadToDoTasks(){
             const list = await api.getTasksByTypes('todo')
             setTodoList(list)
+        }      
+        async function loadDoingTasks(){
+            const list = await api.getTasksByTypes('doing')
+            setDoingList(list)
+        }
+        async function loadDoneTasks(){
+            const list = await api.getTasksByTypes('done')
+            setDoneList(list)
         }
         loadToDoTasks()
+        loadDoingTasks()
+        loadDoneTasks()
     },[])
 
     function changeTodoToDoing(){
