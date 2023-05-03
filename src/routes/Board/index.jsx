@@ -15,21 +15,20 @@ const Board = () => {
             const list = await api.getTasksByTypes('todo')
             setTodoList(list)
         }      
-        async function loadDoingTasks(){
+        loadToDoTasks()
+        /*async function loadDoingTasks(){
             const list = await api.getTasksByTypes('doing')
             setDoingList(list)
         }
         async function loadDoneTasks(){
             const list = await api.getTasksByTypes('done')
             setDoneList(list)
-        }
-        loadToDoTasks()
-        loadDoingTasks()
-        loadDoneTasks()
-    },[])
+        } 
+        //loadDoingTasks()
+        //loadDoneTasks()*/
+    },[]) 
 
     function changeTodoToDoing(){
-        alert('TodoToDoing')
     }
     function changeDoingToDone(){
 
@@ -38,7 +37,10 @@ const Board = () => {
 
     }
     function changeDoingToTodo(){
-
+    }
+    function removeTaskByID(id){
+        //api.removeTaskById(id)
+        alert(id)
     }
 
     return <S.container>
@@ -61,6 +63,7 @@ const Board = () => {
                 {todoList.map((task)=>(
                     <TaskBox key={task.id}
                      task={task}
+                     remove={removeTaskByID}
                      rightArrow={changeTodoToDoing}/>
                 ))}               
             </div>

@@ -4,19 +4,10 @@ import{AiOutlineArrowLeft, AiOutlineArrowRight,AiOutlineEye } from 'react-icons/
 import {api} from './../../api'
 import {Link} from 'react-router-dom'
 
-const TaskBox = ({task, rightArrow}) => {
+const TaskBox = ({task, remove}) => {
 
-    const changeRight = rightArrow
-    const changeLeft = ''
 
-    function removeTaskById(){
-        api.removeTaskById(task.id)
-    }
-
-    function showTaskInfoById(){
-        
-    }
-
+   
     return <S.container>
         <S.colorBar>
         </S.colorBar>
@@ -27,13 +18,13 @@ const TaskBox = ({task, rightArrow}) => {
 
         <S.buttonsBar>
             <button>
-                <CiCircleRemove size={25} onClick={removeTaskById}/>
+                <CiCircleRemove size={25} onClick={()=>remove(task.id)}/>
             </button>
             <button>
-                <AiOutlineArrowLeft size={25} onClick={changeLeft}/>
+                <AiOutlineArrowLeft size={25} />
             </button>
             <button>
-                <AiOutlineArrowRight size={25} onClick={changeRight}/>
+                <AiOutlineArrowRight size={25} />
             </button>
             <Link to={`/task/${task.id}`}>
                 <AiOutlineEye size={25}/>
