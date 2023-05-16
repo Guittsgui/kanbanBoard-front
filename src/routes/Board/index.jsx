@@ -28,6 +28,7 @@ const Board = () => {
         //loadDoneTasks()*/
     },[]) 
 
+
     function changeTodoToDoing(){
     }
     function changeDoingToDone(){
@@ -39,8 +40,9 @@ const Board = () => {
     function changeDoingToTodo(){
     }
     function removeTaskByID(id){
-        //api.removeTaskById(id)
-        alert(id)
+        const newlist = todoList.filter((task)=> task.id != id )
+        setTodoList(newlist)
+        api.removeTaskById(id)
     }
 
     return <S.container>
@@ -58,6 +60,7 @@ const Board = () => {
                 <h2> Done: </h2>
             </div>
         </S.nav>
+
         <S.body>
             <div className="todoTasks boxdiv"> 
                 {todoList.map((task)=>(
